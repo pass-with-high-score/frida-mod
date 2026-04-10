@@ -16,9 +16,9 @@ var engineSignatures = {
     "LayaAir": ["libLayaAir", "laya"],
 };
 
-modules.forEach(function (mod) {
+modules.forEach(function(mod) {
     for (var engine in engineSignatures) {
-        engineSignatures[engine].forEach(function (sig) {
+        engineSignatures[engine].forEach(function(sig) {
             if (mod.name.toLowerCase().indexOf(sig.toLowerCase()) !== -1) {
                 result.engine = engine;
                 result.details.push(engine + " => " + mod.name + " @ " + mod.base + " (size: " + mod.size + ")");
@@ -27,7 +27,7 @@ modules.forEach(function (mod) {
     }
 });
 
-modules.forEach(function (mod) {
+modules.forEach(function(mod) {
     var name = mod.name.toLowerCase();
     if (name.indexOf("game") !== -1 || name.indexOf("unity") !== -1 || name.indexOf("il2cpp") !== -1 ||
         name.indexOf("mono") !== -1 || name.indexOf("cocos") !== -1 || name.indexOf("unreal") !== -1 ||
@@ -39,7 +39,7 @@ modules.forEach(function (mod) {
 });
 
 if (ObjC.available) {
-    ["UnityAppController", "UnityView", "UnityFramework", "UnityDefaultViewController"].forEach(function (cls) {
+    ["UnityAppController", "UnityView", "UnityFramework", "UnityDefaultViewController"].forEach(function(cls) {
         if (ObjC.classes[cls]) {
             result.engine = "Unity";
             result.details.push("ObjC class found: " + cls);
