@@ -1,0 +1,13 @@
+{
+  "extraKnownMarketplaces": {
+    "my-claude-skills": {
+      "source": {
+        "source": "github",
+        "repo": "sandbornm/my-claude-skills"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "frida-instrument@my-claude-skills": true
+  }
+}

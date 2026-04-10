@@ -1,0 +1,9 @@
+Package: app.pwhs.fridainstaller
+Name: Frida Installer
+Depends: mobilesubstrate
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Description: An awesome application to install tweaks!
+Maintainer: Minh
+Author: Minh
+Section: Applications
